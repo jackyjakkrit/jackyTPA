@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "37337465051",
+    "firebase_url": "https://jackytpa.firebaseio.com",
+    "project_id": "jackytpa",
+    "storage_bucket": "jackytpa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37337465051:android:977473bd004d42ff",
+        "android_client_info": {
+          "package_name": "th.or.tpa.jacky_tpa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37337465051-jaof1aqofm5qafudmlctv78ak1fk8uqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUFhDyUOwdrM1D4Ewlv3yTRLpXPa1EJzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37337465051-jaof1aqofm5qafudmlctv78ak1fk8uqq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
