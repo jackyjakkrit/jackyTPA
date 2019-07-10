@@ -56,11 +56,60 @@ class _AuthenState extends State<Authen> {
     );
   }
 
+  Widget signInbutton() {
+    return RaisedButton(
+      color: Colors.orange[900],
+      child: Text(
+        'Sign In',
+        style: TextStyle(color: Colors.white),
+      ),
+      onPressed: () {},
+    );
+  }
+
+  Widget signUpbutton() {
+    return RaisedButton(
+      color: Colors.orange[200],
+      child: Text('Sign Up'),
+      onPressed: () {},
+    );
+  }
+
+  Widget showButton() {
+    return Container(
+      width: 250.0,
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: signInbutton(),
+          ),
+          mySizeBox(),
+          Expanded(
+            child: signUpbutton(),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget mySizeBox() {
+    return SizedBox(
+      width: 8.0,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
+        decoration: BoxDecoration(
+          gradient: RadialGradient(
+            colors: [Colors.white, Colors.orange[900]],
+            radius: 2.0,
+            center: Alignment.topCenter,
+          ),
+        ),
         padding: EdgeInsets.only(top: 60.0),
         alignment: Alignment.topCenter,
         child: Column(
@@ -68,7 +117,8 @@ class _AuthenState extends State<Authen> {
             showLogo(),
             showText(),
             emailText(),
-            passwordText()
+            passwordText(),
+            showButton()
           ],
         ),
       ),
