@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:jacky_tpa/model/jacky_video_model.dart';
+import 'package:jacky_tpa/screens/play_video.dart';
 
 class ShowlistVideo extends StatefulWidget {
   @override
@@ -94,18 +95,29 @@ class ShowlistVideo_State extends State<ShowlistVideo> {
       child: ListView.builder(
         itemCount: jackyVideoModels.length,
         itemBuilder: (context, int index) {
-          return Container(
-            child: Column(
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    showImage(index),
-                    showText(index),
-                  ],
-                ),
-                myDivider(),
-              ],
+          return GestureDetector(
+            child: Container(
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      showImage(index),
+                      showText(index),
+                    ],
+                  ),
+                  myDivider(),
+                ],
+              ),
             ),
+            onTap: () {
+              print('index = $index');
+
+              var playRoute = MaterialPageRoute(
+                  builder: (BuildContext context) => PlayVideo(
+                        jackyVideoModel: jackyVideoModels[index],
+                      ));
+              Navigator.of(context).push(playRoute);
+            },
           );
         },
       ),
