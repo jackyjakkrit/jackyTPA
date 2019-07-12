@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:jacky_tpa/screens/show_list_video.dart';
 
 class MyService extends StatefulWidget {
   @override
@@ -108,7 +109,7 @@ class _MyServiceState extends State<MyService> {
       appBar: AppBar(backgroundColor: Colors.orange[900],
         title: showTitleAppBar(),
       ),
-      body: Text('body'),
+      body: ShowlistVideo(),
       drawer: myDrawerMenu(),
     );
   }
